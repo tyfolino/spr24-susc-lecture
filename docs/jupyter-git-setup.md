@@ -78,13 +78,13 @@ Remember which email you use to sign up :)
 
 ---
 
-# Troubleshooting
+# Step 3 for Windows Users
+
+Windows users (myself included) can face some annoying hiccups using Anaconda + Jupyter + Git. I recommend [downloading Git](https://gitforwindows.org) to your Windows machine as a separate installation from Anaconda.
 
 ---
 
-# Step 3 for Windows Users
-
-Windows users (myself included) can face some annoying hiccups. I recommend [downloading Git](https://gitforwindows.org) to your Windows machine as a separate installation from Anaconda.
+# Troubleshooting
 
 ---
 
