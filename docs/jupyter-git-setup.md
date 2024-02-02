@@ -73,13 +73,22 @@ If you checked all of these, you can try launching jupyter lab from your termina
 
 Follow the directions [here](https://docs.github.com/en/get-started/quickstart/creating-an-account-on-github).
 
+<br></br>
+Remember which email you use to sign up :)
+
 ---
 
 # Troubleshooting
 
 ---
 
-# What to do if you can't get this to work:
+# Step 3 for Windows Users
+
+Windows users (myself included) can face some annoying hiccups. I recommend [downloading Git](https://gitforwindows.org) to your Windows machine as a separate installation from Anaconda.
+
+---
+
+# What to do if you can't get something to work:
 - Google your problem!
     - I promise you are never the first to have a problem in 99.9% of programming cases (or life!)
 - Check out source docs for [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
