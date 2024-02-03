@@ -15,7 +15,7 @@ City College of New York, CUNY
 
 ---
 
-We will need three packages, plus an optional one:
+We will need four packages:
 - JupyterLab
 - JupyterLab-git
 - git

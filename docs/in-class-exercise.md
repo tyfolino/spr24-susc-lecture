@@ -68,7 +68,8 @@ Make sure you can navigate to it using JupyterLab!
 - When selecting the kernel, make sure it is `susc`
 - In your first cell, run this code:
 `!git branch -m main`
-- This just renames the branch from `master` to `main`
+`!git config --global user.name "First Last"`
+`!git config --global user.email "your-github-email@example.com"`
 
 ---
 
@@ -98,6 +99,44 @@ In the top menu bar, git -> manage remote
 ### Push to GitHub
 
 ![width:600px](git-push.png)
+
+---
+
+# In case people are having authentication issues...
+
+----
+
+### Authentication to remote repository hosts
+
+If you are seeing errors similar to `[E yyyy-mm-dd hh:mm:ss ServerApp] 500 POST /git/<clone|push|pull|status>` on the console which is running the JupyterLab server, you probably need to set up a credentials store for your local Git repository.
+
+This extension tries to handle credentials for HTTP(S) connections (if you don't have set up a credential manager). But not for other SSH connections.
+
+---
+
+### A note for windows users. 
+
+> For Windows users, it is recommended to install [git for windows](https://gitforwindows.org/). It will automatically set up a credential manager.
+> In order to connect to a remote host, it is recommended to use SSH.
+
+---
+
+
+#### SSH protocol
+
+Here are the steps to follow to set up SSH authentication (skip any that is already accomplished for your project):
+
+1. [Create a SSH key](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+2. Register the public part of it to your Git server:
+   - [GitHub](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+
+---
+
+3. Tell your local Git repository to [connect to remote via ssh](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)
+<br></br>
+
+You should now be able to pull and push committed changes to and from your remote repository using the respective buttons on the top of the extension's panel.
 
 ---
 
