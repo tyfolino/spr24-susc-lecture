@@ -5,6 +5,7 @@ _class: invert
 ---
 
 # Git, GitHub, and Jupyter
+## In-class exercise
 
 Ty Janoski
 City College of New York, CUNY 
