@@ -30,16 +30,28 @@ City College of New York, CUNY
 
 ---
 
-# Basics of version control
+> Version control is the practice of tracking and managing changes to software code.
+
+---
+
+## Git
+- Git: version control system
+    - tracks changes to code over time
+    - enables recall of specific versions
+- Makes it easier for developers to work together
+    - Lets users create *branches* to work independently and then *merge* the changes back into the main code
+    - Each developer has a local copy of the code
+
+---
+
+### Git basics
 
 1) Add file(s) to a staging area.
-`git add myfile.py`
-2) Write changes to a local repository.
-`git commit -m "made some changes"`
-3) (Opt.) Push changes to *remote* repository.
-`git push -u origin main`
-
-Note: while it's good to know these commands, we will use a GUI to make it easier.
+`git add somefile.py`
+2) Save changes to a *local* repository.
+`git commit -m "Made some awesome changes!"`
+3) (Opt.) Upload changes to *remote* repository.
+`git push`
 
 ---
 
@@ -47,11 +59,7 @@ Note: while it's good to know these commands, we will use a GUI to make it easie
 
 ---
 
-# Git is helpful on its own:
-
-- It lets you easily track changes to your code
-- If something goes wrong, you can rollback to an earlier, working version
-- You can organize your tasks and workflow ("branching")
+# Git is helpful on its own
 
 ### But it really shines when used with GitHub!
 
@@ -67,25 +75,26 @@ Note: while it's good to know these commands, we will use a GUI to make it easie
 
 GitHub is a website where you can host your code & files in databases called "repositories."
 <br></br>
-<sup>I don't fully understand how GitHub gets money but they offer tons of services for free. No need to question it!</sup>
+<sup>I don't fully understand how GitHub gets money but they offer tons of services for free.</sup>
 
 ---
-
+## Typical GitHub workflow
 ![](Distributed-Version-Control-System-edited.jpg)
 
 ---
 
-## Here's a typical workflow.
-1) `git add your-files-here.txt` to add your files and edits to the staging area
-2) `git commit -m "your message here"` to put these updated files to your *local* repository
-3) `git push` your changes to GitHub repository
+### We can go the other way, too.
 
-Note: Before pushing the first time, we will have to connect our Git and GitHub repositories.
+- `git clone github.com/somerepository.git`
+    - Creates a copy of an entire remote repository
+- `git pull`
+    - "Pulls" the latest changes and commits from the remote repository to your local working copy
+
+Typically, you only `clone` once but `pull` many times.
 
 ---
 
-## Branching
-![](Distributed-Version-Control-System.jpg)
+### So far, the workflows we've described are good for people working by themselves, but in this class and in the future, you will be working on a team.
 
 ---
 
@@ -95,11 +104,28 @@ In Git/GitHub, branching creates **a parallel version of the code** to work on n
 
 ---
 
+
+
+## Branching
+![](Distributed-Version-Control-System.jpg)
+
+---
+
 ### Branching workflow
 
 - Create and switch to branch
-- Add commits
+`git checkout -b new-branch`
+- Add changes and commit
+`git add ...`
+`git commit -m "..."`
 - Push branch to GitHub
+`git push -u origin new-branch`<sup>*</sup>
+
+<sup>* after the first push, you can just use `git push`</sup>
+
+---
+
+### If you want to merge changes from a branch to the main code...
 - Start a **pull request**
 - Review & merge
 
@@ -114,6 +140,16 @@ A pull request is a way to propose changes from a branch in a repository to the 
 ### Pull requests
 
 ![width:900px](https://www.atlassian.com/blog/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)
+
+---
+
+## Other helpful git tools
+- `git status` = check status of your files
+- `git branch` = list branches
+- `git rm` = delete a file
+- `git stash` = temporarily store your changes
+- `git checkout <branchname>` = switch branches
+- `git stash pop` = apply changes to current branch
 
 ---
 
